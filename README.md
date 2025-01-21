@@ -71,14 +71,6 @@ This is a graph of the post flow of the `overchan.test` newsgroup over 4 years, 
 
 [source code for map generation](https://github.com/nilesr/nntpchan-mapper)
 
-## Donations
-
-Like this project? Why not help by funding it? This address pays for the server that runs `2hu-ch.org`
-
-Bitcoin: 15yuMzuueV8y5vPQQ39ZqQVz5Ey98DNrjE
-
-Monero: 46thSVXSPNhJkCgUsFD9WuCjW4K41DAHGL9khni2VEqmZZhfEZVvcukCp357rfhngZdviZMaeNdj5CLqhLyeK2qZRBCyL7Q
-
 ## Acknowledgements
 
 * [Deavmi](https://deavmi.carteronline.net/) - Making the documentation beautiful.
