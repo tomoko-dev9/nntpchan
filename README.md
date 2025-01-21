@@ -13,17 +13,18 @@
 [This](doc) is a step-by-step guide for getting up-and-running with NNTPChan as well as documentation for developers who want to either work on NNTPChan directly or use NNTPChan in their aplications with the API.
 
 ## Enable Some Modules
-
+```
 export GO111MODULE=off
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+```
 
 ## now its time to create the database in postgres
-
+```
 CREATE DATABASE nntpchan;
 CREATE USER username WITH PASSWORD 'CHANGEME';
 GRANT ALL PRIVILEGES ON DATABASE nntpchan TO username;
-
+```
 
 
 TL;DR edition:
