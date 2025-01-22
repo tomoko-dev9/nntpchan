@@ -51,14 +51,6 @@ Web:
 
 * [Yukko](https://github.com/faissaloo/Yukko): ncurses based nntpchan web ui reader
 
-
-## Support
-
-Need help? Join us on IRC.
-
-1. [freenode: #nntpchan](https://webchat.freenode.net/?channels=#nntpchan)
-2. [rizon: #nntpchan](https://qchat.rizon.net/?channels=#nntpchan) - Most active
-
 ## History
 
 * started in mid 2013 on anonet
