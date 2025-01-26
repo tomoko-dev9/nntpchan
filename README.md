@@ -12,6 +12,23 @@
 
 [This](doc) is a step-by-step guide for getting up-and-running with NNTPChan as well as documentation for developers who want to either work on NNTPChan directly or use NNTPChan in their aplications with the API.
 
+### Install the dependancies
+
+    sudo apt-get update
+    sudo apt-get --no-install-recommends install imagemagick ffmpeg sox build-essential git ca-certificates postgresql postgresql-client
+
+    ### Get the NNTPChan source
+    git clone https://github.com/konamicode9/nntpchan
+    cd nntpchan
+
+### Now compile!
+
+Run `make`:
+
+    make
+
+
+
 ## Enable Some Modules
 ```
 export GO111MODULE=off
