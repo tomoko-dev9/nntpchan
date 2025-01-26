@@ -41,6 +41,22 @@ CREATE USER username WITH PASSWORD 'CHANGEME';
 GRANT ALL PRIVILEGES ON DATABASE nntpchan TO username;
 ```
 
+Running NNTPChan
+================
+
+Once you have [built NNTPChan](building.md) and done [the initial setup you](setting-up.md) you can start NNTPChan.
+
+Before running make sure you run the setup command, you only need to do this one time:
+
+    ./srndv2 setup
+
+You can now start the NNTPChan node (srndv2) by running:
+
+    ./srndv2 run
+
+Now you can check out the web-interface by navigating to 127.0.0.1:18000 (default address - unless you have changed it in your `srnd.ini`) or you can [configure your newsreader](extras/configure-newsreader.md).
+
+
 ## Bugs and issues
 
 *PLEASE* report any bugs you find while building, setting-up or using NNTPChan on the [GitHub issue tracker](https://github.com/majestrate/nntpchan/issues), the [issue tracker on tor](http://git.psii2pdloxelodts.onion/psi/nntpchan/), the [issue tracker on i2p](http://git.psi.i2p/psi/nntpchan/) or on the [GitGud issue tracker](https://gitgud.io/jeff/nntpchan/issues) so that the probelms can be resolved or discussed.
