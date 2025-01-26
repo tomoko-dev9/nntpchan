@@ -14,7 +14,15 @@
 ### Install the dependancies
 
     sudo apt-get update
-    sudo apt-get --no-install-recommends install imagemagick ffmpeg sox build-essential git ca-certificates postgresql postgresql-client
+    sudo apt-get --no-install-recommends install imagemagick ffmpeg sox build-essential git ca-certificates postgresql postgresql-client golang
+    
+
+## Enable Some Modules
+```
+export GO111MODULE=off
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+```
 
 ### Get the NNTPChan source
     git clone https://github.com/konamicode9/nntpchan
@@ -25,13 +33,6 @@
 Run `make`:
 
     make
-
-## Enable Some Modules
-```
-export GO111MODULE=off
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-```
 
 ## now its time to create the database in postgres
 ```
