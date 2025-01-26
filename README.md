@@ -9,7 +9,6 @@
 
 ## Getting started
 
-
 [This](doc) is a step-by-step guide for getting up-and-running with NNTPChan as well as documentation for developers who want to either work on NNTPChan directly or use NNTPChan in their aplications with the API.
 
 ### Install the dependancies
@@ -27,8 +26,6 @@ Run `make`:
 
     make
 
-
-
 ## Enable Some Modules
 ```
 export GO111MODULE=off
@@ -42,17 +39,6 @@ CREATE DATABASE nntpchan;
 CREATE USER username WITH PASSWORD 'CHANGEME';
 GRANT ALL PRIVILEGES ON DATABASE nntpchan TO username;
 ```
-
-
-TL;DR edition:
-
-
-    $ sudo apt update
-    $ sudo apt install --no-install-recommends install imagemagick ffmpeg sox build-essential git ca-certificates postgresql postgresql-client golang
-    $ git clone https://github.com/majestrate/nntpchan
-    $ cd nntpchan
-    $ make
-    $ SRND_INSTALLER=0 ./srndv2 setup 
 
 ## Bugs and issues
 
