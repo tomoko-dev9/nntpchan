@@ -17,7 +17,7 @@
     sudo apt-get update
     sudo apt-get --no-install-recommends install imagemagick ffmpeg sox build-essential git ca-certificates postgresql postgresql-client
 
-    ### Get the NNTPChan source
+### Get the NNTPChan source
     git clone https://github.com/konamicode9/nntpchan
     cd nntpchan
 
