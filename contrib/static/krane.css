@@ -87,7 +87,7 @@
         padding-right: 5px;
       }
       .posttext {
-        width: 400px;
+        width: 350px;
         height: 20px;
         border: 1px solid #363636;
         background-color:#111;
@@ -103,7 +103,7 @@
       }
       .postarea {
         width: 400px;
-        height: 48px;
+        height: 100px;
         border: 1px solid #363636;
         background-color:#111;
         color:#ddd;
