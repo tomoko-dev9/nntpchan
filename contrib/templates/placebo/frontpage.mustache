@@ -21,12 +21,12 @@
       <meta property="og:description" content="Most of the rest of the wild west"/>
       <meta property="og:url" content="{{prefix}}"/>
       <meta property="og:image"
-            content="{{prefix}}static/changolia-logo.png"/>
-    <title> CHANGOLIA </title>
+            content="{{prefix}}static/retrotor.png"/>
+    <title> NNTPChan </title>
   </head>
   <body>
       <center>
-          <img id="logo" src="{{prefix}}static/changolia-logo.png" />
+          <img id="logo" src="{{prefix}}static/retrotor.png" />
           <a href="{{prefix}}b/"><h2>Board List</h2></a>
           <a href="{{prefix}}o/?lang={{i18n.Name}}">Firehose</a>
           <a href="{{prefix}}static/faq.html">FAQ</a>
@@ -35,50 +35,10 @@
     <hr/>
 
 <center>
-          <table>
-            <tbody>
-              <tr>
-                <td class="board_td">
-                  {{! todo: move boardgraph into its own file like postsgraph }}
-                  <table id="board_graph">
-                    <thead>
-                    <tbody>
-                      {{# boardgraph}}
-                        <tr>
-                          <td>
-                            <a href="{{prefix}}b/{{Board}}/">{{Board}}</a>
-                          </td>
-                          <td>
-                            {{Hour}}
-                          </td>
-                          <td>
-                            {{Day}}
-                          </td>
-                          <td>
-                            {{All}}
-                          </td>
-                        </tr>
-                      {{/ boardgraph}}
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          {{{overview}}}
-        </div>
-      </div>
-    </center>
-    <script type="text/javascript">
-        var e = document.getElementById("nntpchan_banner");
-        nntpchan_inject_banners(e, "{{prefix}}");
-    </script>
-    <hr/>
-
-
     <footer>
       <p class="legal">All posts on this site are the responsibility of the individual poster and not the administration, pursuant to 47 U.S.C. § 230.</p>
       <p class="legal">To make a DMCA request or report illegal content, please contact the administration</p>
     </footer>
   </body>
+</center>
 </html>
