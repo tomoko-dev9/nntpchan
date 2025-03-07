@@ -47,9 +47,11 @@ Run `make`:
 ## now its time to create the database in postgres
 ```
 CREATE DATABASE root;
-CREATE USER username WITH PASSWORD 'root';
+CREATE USER root WITH PASSWORD 'root';
 GRANT ALL PRIVILEGES ON DATABASE root TO root;
 ```
+note this onky allows db root and username root not sure why but i will investigate oh and the default port is 5432
+your gonna need it in the installation
 
 Running NNTPChan
 ================
