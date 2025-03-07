@@ -50,7 +50,8 @@ CREATE DATABASE root;
 CREATE USER root WITH PASSWORD 'root';
 GRANT ALL PRIVILEGES ON DATABASE root TO root;
 ```
-note this onky allows db root and username root not sure why but i will investigate oh and the default port is 5432
+note this only allows db root and username root
+not sure why but i will investigate oh and the default port is 5432
 your gonna need it in the installation
 
 Running NNTPChan
