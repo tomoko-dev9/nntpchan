@@ -36,7 +36,8 @@ js: $(JS)
 srnd: $(SRND)
 
 $(MINIFY):
-	GOPATH=$(REPO_GOPATH) $(GO) get -v github.com/tdewolff/minify
+	GO111MODULE=on GOPATH=$(REPO_GOPATH) go get -u github.com/tdewolff/minify
+
 
 $(GOPHERJS):
 	GOROOT=$(GOPHERJS_GOROOT) GOPATH=$(GOPHERJS_GOPATH) $(GOPHERJS_GO) get -v github.com/gopherjs/gopherjs
