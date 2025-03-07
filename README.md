@@ -11,18 +11,28 @@
 
 [This](doc) is a step-by-step guide for getting up-and-running with NNTPChan as well as documentation for developers who want to either work on NNTPChan directly or use NNTPChan in their aplications with the API.
 
+### Step 1: Download Go 1.15 Tarball
+```
+wget https://dl.google.com/go/go1.15.linux-amd64.tar.gz
+```
+
+### Step 2: Extract the Tarball
+```
+sudo tar -C /usr/local -xvzf go1.15.linux-amd64.tar.gz
+```
+
+### Set Up Go Environment Variables
+```
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+```
+
 ### Install the dependancies
 
     sudo apt-get update
     sudo apt-get --no-install-recommends install imagemagick ffmpeg sox build-essential git ca-certificates postgresql postgresql-client golang
     
-
-## Enable Some Modules
-```
-export GO111MODULE=on
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-```
 
 ### Get the NNTPChan source
     git clone https://github.com/konamicode9/nntpchan
