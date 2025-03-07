@@ -36,7 +36,7 @@ js: $(JS)
 srnd: $(SRND)
 
 $(MINIFY):
-	GO111MODULE=on GOPATH=$(REPO_GOPATH) go install github.com/tdewolff/minify@latest
+	GO111MODULE=on GOPATH=$(REPO_GOPATH) go get -u github.com/tdewolff/minify
 
 
 $(GOPHERJS):
