@@ -46,9 +46,9 @@ Run `make`:
 
 ## now its time to create the database in postgres
 ```
-CREATE DATABASE nntpchan;
-CREATE USER username WITH PASSWORD 'CHANGEME';
-GRANT ALL PRIVILEGES ON DATABASE nntpchan TO username;
+CREATE DATABASE root;
+CREATE USER username WITH PASSWORD 'root';
+GRANT ALL PRIVILEGES ON DATABASE root TO root;
 ```
 
 Running NNTPChan
