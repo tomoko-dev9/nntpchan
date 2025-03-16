@@ -122,7 +122,7 @@ func (self *nntpAttachment) Save(dir string) (err error) {
 		fpath := filepath.Join(dir, self.filepath)
 		if !CheckFile(fpath) {
 			var f io.WriteCloser
-			// does not exist so will will write it
+			// does not exist so will write it
 			f, err = os.Create(fpath)
 			if err == nil {
 				_, err = f.Write(self.Bytes())

@@ -497,7 +497,7 @@ Connection.prototype.onclose = function(callback) {
 /* @brief Initializes the websocket connection.
  *
  * @param channel The channel to open a connection to.
- * @return A connection the the websocket.
+ * @return A connection the websocket.
  */
 function initWebSocket(chat, url, connection) {
   var ws = null;
