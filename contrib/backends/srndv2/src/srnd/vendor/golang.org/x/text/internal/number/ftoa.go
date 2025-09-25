@@ -432,17 +432,3 @@ func fmtB(dst []byte, neg bool, mant uint64, exp int, flt *floatInfo) []byte {
 
 	return dst
 }
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
