@@ -35,7 +35,7 @@ export PATH=$PATH:$GOPATH/bin
     
 
 ### Get the NNTPChan source
-    git clone https://github.com/konamicode9/nntpchan
+    git clone https://github.com/tomoko-dev9/nntpchan
     cd nntpchan
 
 ### Now compile!
