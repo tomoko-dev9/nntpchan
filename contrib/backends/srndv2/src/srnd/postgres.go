@@ -1781,7 +1781,7 @@ func (self *PostgresDatabase) GetLastDaysPosts(n int64) (posts []PostEntry) {
 	now = time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, time.UTC)
 	for n > 0 {
 		var num int64
-		err := self.conn.QueryRow(self.stmt[GetLastDaysPosts], now.Add(day).Unix(), now.Unix()).Scan(&num)
+		err := self.conn.QueryRow(self.stmt[GetLastDaysPosts], now.Unix(), now.Add(-day).Unix()).Scan(&num)
 		if err == nil {
 			posts = append(posts, PostEntry{now.Unix(), num})
 			now = now.Add(-day)

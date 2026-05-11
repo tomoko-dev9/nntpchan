@@ -14,31 +14,75 @@
       <meta lang="{{i18n.Name}}" />
       <link rel="stylesheet" href="{{prefix}}static/krane.css" />
       <link rel="stylesheet" href="{{prefix}}static/user.css" />
+      <script src="{{prefix}}static/nntpchan.js" type="text/javascript"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta property="og:site_name" content="changolia" />
       <meta property="og:type" content="website"/>
       <meta property="og:title" content="changolia"/>
       <meta property="og:description" content="Most of the rest of the wild west"/>
       <meta property="og:url" content="{{prefix}}"/>
-      <meta property="og:image"
-            content="{{prefix}}static/retrotor.png"/>
-    <title> NNTPChan </title>
+      <meta property="og:image" content="{{prefix}}static/retrotor.png"/>
+    <title> {{frontend}} on NNTPChan </title>
   </head>
   <body>
+    {{{navbar}}}
       <center>
           <img id="logo" src="{{prefix}}static/retrotor.png" />
           <a href="{{prefix}}b/"><h2>Board List</h2></a>
           <a href="{{prefix}}o/?lang={{i18n.Name}}">Firehose</a>
           <a href="{{prefix}}static/faq.html">FAQ</a>
-          
+          <div>We've Had {{totalposts}} Posts Since August 01 2015</div>
+      </center>
+      <hr/>
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <td class="posts_td">
+                {{{postsgraph}}}
+              </td>
+              <td class="board_td">
+                {{! todo: move boardgraph into its own file like postsgraph }}
+                <table id="board_graph">
+                  <thead>
+                    <tr>
+                      <th> {{#i18n.Translations}}{{board_label}}{{/i18n.Translations}} </th>
+                      <th> {{#i18n.Translations}}{{posts_hour}}{{/i18n.Translations}} </th>
+                      <th> {{#i18n.Translations}}{{posts_today}}{{/i18n.Translations}} </th>
+                      <th> {{#i18n.Translations}}{{total}}{{/i18n.Translations}} </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{# boardgraph}}
+                      <tr>
+                        <td>
+                          <a href="{{prefix}}b/{{Board}}/">{{Board}}</a>
+                        </td>
+                        <td>
+                          {{Hour}}
+                        </td>
+                        <td>
+                          {{Day}}
+                        </td>
+                        <td>
+                          {{All}}
+                        </td>
+                      </tr>
+                    {{/ boardgraph}}
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        {{{overview}}}
       </center>
     <hr/>
-
-<center>
+    <center>
     <footer>
       <p class="legal">All posts on this site are the responsibility of the individual poster and not the administration, pursuant to 47 U.S.C. § 230.</p>
       <p class="legal">To make a DMCA request or report illegal content, please contact the administration</p>
     </footer>
+    </center>
   </body>
-</center>
 </html>

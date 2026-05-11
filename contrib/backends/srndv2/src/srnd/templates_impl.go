@@ -517,16 +517,30 @@ func (self *templateEngine) genFrontPage(top_count int, prefix, frontend_name st
 	param := make(map[string]interface{})
 
 	param["overview"] = self.renderTemplate("overview", map[string]interface{}{"overview": overviewModel(models)}, i18n)
-	/*
-		sort.Sort(posts_graph)
-		param["postsgraph"] = self.renderTemplate("posts_graph.mustache", map[string]interface{}{"graph": posts_graph})
-
-		if len(frontpage_graph) > top_count {
-			param["boardgraph"] = frontpage_graph[:top_count]
-		} else {
-			param["boardgraph"] = frontpage_graph
-		}
-	*/
+        // build frontpage board graph
+        var frontpage_graph boardPageRows
+        fp_stats, fp_err := db.GetNewsgroupStats()
+        if fp_err == nil {
+                for _, s := range fp_stats {
+                        all, _ := db.CountAllArticlesInGroup(s.Name)
+                        hour := db.CountPostsInGroup(s.Name, 3600)
+                        frontpage_graph = append(frontpage_graph, boardPageRow{Board: s.Name, Day: s.PPD, Hour: hour, All: all})
+                }
+                sort.Sort(frontpage_graph)
+        }
+        if len(frontpage_graph) > top_count {
+                param["boardgraph"] = frontpage_graph[:top_count]
+        } else {
+                param["boardgraph"] = frontpage_graph
+        }
+        // build posts graph from last 7 days
+        var posts_graph postsGraph
+        day_posts := db.GetLastDaysPosts(7)
+        for _, entry := range day_posts {
+                posts_graph = append(posts_graph, postsGraphRow{day: entry.Time(), Num: entry.Count()})
+        }
+        sort.Sort(posts_graph)
+        param["postsgraph"] = self.renderTemplate("posts_graph", map[string]interface{}{"graph": posts_graph}, i18n)
 	param["frontend"] = frontend_name
 	param["totalposts"] = db.ArticleCount()
 	param["prefix"] = prefix

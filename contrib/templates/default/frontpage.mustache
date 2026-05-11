@@ -1,4 +1,4 @@
-{!
+{{!
   frontpage.mustache -- template for index.html
   template parameters:
   - boardgraph ( markup of boardPageRows instance, see srnd/model.go )
@@ -23,15 +23,14 @@
         <div id="nntpchan_banner">
         </div>
         <div class="index-inner">
-<h2>          <div>{{frontend}} on nntpchan</div></h2>
-                  <h2>View the <a href="/o/?lang=en">overboard</a></h2>
-        <h3>Read the <a href="{{prefix}}static/faq.html">FAQ</a></h3>
-        <h3>Lurk on <a href="irc://allyour4nert7pkh.onion/overchan">URC</a></h3>
-        <h3>Check out the <a href="{{prefix}}boards.html">board list</a></h3>
-        <h3>Fork on github: <a href="https://github.com/nesshy9/nntpchan/">frontend</a> and <a href="https://github.com/majestrate/srndv2/">core</a></h3>
+          <div>{{frontend}} on nntpchan</div>
+          <div>View the <a href="{{prefix}}ukko.html">overboard</a></div>
+          <div>Join the IRC on <a href="https://qchat.rizon.net/">rizon</a> or <a href="irc://127.0.0.1:6668/overchan">irc2p</a></div>
+          <div>Check out the <a href="{{prefix}}boards.html">board list</a></div>
+          <div>Fork on github: <a href="https://github.com/tomoko-dev9/nntpchan/">frontend</a> and <a href="https://github.com/majestrate/srndv2/">core</a></div>
+          <div>We've Had {{totalposts}} Posts Since May 10 2026 </div>
         </div>
         <div class="index-inner">
-            <!--
           <table>
             <tbody>
               <tr>
@@ -72,9 +71,6 @@
               </tr>
             </tbody>
           </table>
-          -->
-
-          {{{OvercockGraph}}}
           {{{overview}}}
         </div>
       </div>

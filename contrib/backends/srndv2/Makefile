@@ -10,13 +10,13 @@ all: build
 build: srndv2
 
 srndv2:
-	GOARM=$(GOARM) GOOS=$(GOOS) GOARCH=$(GOARCH) GOPATH=$(REPO) GOROOT=$(GOROOT) $(GO) build -ldflags "-X srnd.GitVersion=-$(shell git rev-parse --short HEAD)" -v
+	GOARM=$(GOARM) GOOS=$(GOOS) GOARCH=$(GOARCH) GO111MODULE=off GOPATH=/tmp/srnd-gopath GOROOT=$(GOROOT) $(GO) build -ldflags "-X srnd.GitVersion=-$(shell git rev-parse --short HEAD)" -v
 
 srndv2-lua:
-	GOPATH=$(REPO) GOROOT=$(GOROOT) $(GO) build -ldflags "-X srnd.GitVersion=-$(shell git rev-parse --short HEAD)" -tags lua -v
+	GO111MODULE=off GOPATH=/tmp/srnd-gopath GOROOT=$(GOROOT) $(GO) build -ldflags "-X srnd.GitVersion=-$(shell git rev-parse --short HEAD)" -tags lua -v
 
 clean:
-	GOPATH=$(REPO) GOROOT=$(GOROOT) $(GO) clean -v
+	GO111MODULE=off GOPATH=/tmp/srnd-gopath GOROOT=$(GOROOT) $(GO) clean -v
 
 test:
-	GOPATH=$(REPO) GOROOT=$(GOROOT) $(GO) test srnd
+	GO111MODULE=off GOPATH=/tmp/srnd-gopath GOROOT=$(GOROOT) $(GO) test srnd

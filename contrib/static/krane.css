@@ -559,3 +559,43 @@ background-repeat: repeat;
 .spam-button {
   display: none;
 }
+
+/* board and posts graph layout */
+#posts_graph {
+    border-collapse: collapse;
+    margin-right: 20px;
+}
+#posts_graph th, #posts_graph td {
+    padding: 2px 8px;
+    text-align: left;
+}
+#board_graph {
+    border-collapse: collapse;
+}
+#board_graph th, #board_graph td {
+    padding: 2px 12px;
+    text-align: left;
+}
+.posts_td {
+    vertical-align: top;
+    padding-right: 20px;
+}
+.board_td {
+    vertical-align: top;
+}
+#overview_graph {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#overview_graph th, #overview_graph td {
+    padding: 4px 16px;
+    text-align: left;
+}
+
+
+
+/* lighter dark background for graph table headers only */
+#posts_graph th, #board_graph th, #overview_graph th {
+    background-color: #2a2a2a;
+    padding: 6px 12px;
+}
