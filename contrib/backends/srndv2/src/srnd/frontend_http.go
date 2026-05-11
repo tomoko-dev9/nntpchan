@@ -563,7 +563,7 @@ func (self *httpFrontend) handle_postform(wr http.ResponseWriter, r *http.Reques
 		}
 		return
 	}
-	if checkCaptcha && len(captcha_id) == 0 {
+	if checkCaptcha && len(pr.Reference) == 0 && len(captcha_id) == 0 {
 		cid, ok := sess.Values["captcha_id"]
 		if ok {
 			captcha_id = cid.(string)
@@ -573,7 +573,7 @@ func (self *httpFrontend) handle_postform(wr http.ResponseWriter, r *http.Reques
 		sess.Values["captcha_id"] = ""
 	}
 	log.Println("captcha", captcha_id, "try '", captcha_solution, "'")
-	if checkCaptcha && !captcha.VerifyString(captcha_id, captcha_solution) {
+	if checkCaptcha && len(pr.Reference) == 0 && !captcha.VerifyString(captcha_id, captcha_solution) {
 		// captcha is not valid
 		captcha_retry = true
 	} else {

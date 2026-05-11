@@ -330,7 +330,7 @@ func (self *templateEngine) genThread(allowFiles, requireCaptcha bool, root Arti
 			self.renderJSON(wr, t)
 		} else {
 			t.I18N(i18n)
-			form := renderPostForm(prefix, newsgroup, msgid, allowFiles, requireCaptcha, i18n)
+			form := renderPostForm(prefix, newsgroup, msgid, allowFiles, false, i18n)
 			self.writeTemplate("thread", map[string]interface{}{"sfw": sfw, "thread": t, "board": map[string]interface{}{"Name": newsgroup, "Frontend": frontend, "AllowFiles": allowFiles}, "form": form, "prefix": prefix}, wr, i18n)
 		}
 	} else {

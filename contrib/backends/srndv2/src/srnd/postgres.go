@@ -1287,7 +1287,7 @@ func (self *PostgresDatabase) GetThreadReplyPostModels(prefix, rootpost string, 
 			}
 			// get pubkey if it exists
 			// quiet fail
-			self.conn.QueryRow(self.stmt[GetArticlePubkey], model.Message_id).Scan(model.Key)
+			self.conn.QueryRow(self.stmt[GetArticlePubkey], model.Message_id).Scan(&model.Key)
 			repls = append(repls, model)
 		}
 		rows.Close()

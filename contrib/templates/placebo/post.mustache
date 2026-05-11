@@ -1,9 +1,9 @@
 <div id="{{post.PostHash}}"
      {{#post.OP}}
-     class="messageroot post"
+     class="messageroot post {{#post.Pubkey}}admin-post{{/post.Pubkey}}"
      {{/post.OP}}
      {{^post.OP}}
-     class="message post"
+     class="message post {{#post.Pubkey}}admin-post{{/post.Pubkey}}"
      {{/post.OP}}
      data-name="{{post.Name}}"
      data-frontend="{{post.Frontend}}"
